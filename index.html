@@ -35,7 +35,7 @@
         integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
         </script>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -45,7 +45,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -69,37 +68,26 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#courses">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
-                    </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Courses
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Tamil</a></li>
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Hindi</a></li>
-                            <li><a class="dropdown-item" href="#">Urdu</a></li>
-                            <!-- <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            <li><a class="dropdown-item" href="#online-courses">Online Courses</a></li>
+                            <li><a class="dropdown-item" href="#classroom-training">Classroom Training</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about-us">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contact-us">Contact</a>
                     </li>
                 </ul>
                 <div class="d-flex">
                     <a href="#registerOnline" class="btn btn-success btn-sm" data-toggle="modal"
-                        data-target="#registerOnline">SIGN-IN
-                        / REGISTER</a>
+                        data-target="#registerOnline">SIGN-IN / REGISTER</a>
                 </div>
             </div>
         </div>
@@ -170,7 +158,7 @@
     </header>
 
     <!-- Features List Holder -->
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6">
@@ -231,15 +219,14 @@
 
 
     <!-- Online Courses -->
-    <section class="online-courses" id="courses">
+    <section class="online-courses" id="online-courses">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="online-courses-text-widget">
                         <h2>Online Courses</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ab, itaque nesciunt ut ipsa
-                            harum corrupti, voluptatum libero nulla natus laudantium fugit neque similique, esse in qui
-                            laborum? Natus, modi?</p>
+                        <p>Explore a wide range of online courses designed to enhance your skills in programming,
+                            cybersecurity, data analytics, and more.</p>
                         <a href="#" class="btn btn-warning btn-sm">View all Courses</a>
                     </div>
                 </div>
@@ -247,79 +234,74 @@
             <div class="row mt-5">
                 <div class="col-lg-4 col-md-4">
                     <div class="card online-course-card">
-                        <img src="https://source.unsplash.com/random/600x314" alt="Random Image" class="img-fluid">
+                        <img src="./assets/images/IT Auto.png" alt="Python Course" class="img-fluid">
                         <div class="card-body">
-                            <h3 class="card-title">Course Title</h3>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error beatae,
-                                repellat, labore, velit earum itaque excepturi amet nesciunt ex voluptate laboriosam nam
-                                officiis corporis iste ipsa maxime magnam cumque sint.</p>
+                            <h3 class="card-title">Google IT Automation with Python</h3>
+                            <p class="card-text">Learn how to automate tasks using Python, manage systems, and
+                                troubleshoot IT infrastructure.</p>
                             <a href="#" class="btn btn-sm btn-primary">View Course</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="card online-course-card">
-                        <img src="https://source.unsplash.com/random/600x314" alt="Random Image" class="img-fluid">
+                        <img src="./assets/images/java-online.webp" alt="Java Course" class="img-fluid">
                         <div class="card-body">
-                            <h3 class="card-title">Course Title</h3>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error beatae,
-                                repellat, labore, velit earum itaque excepturi amet nesciunt ex voluptate laboriosam nam
-                                officiis corporis iste ipsa maxime magnam cumque sint.</p>
+                            <h3 class="card-title">Java for Beginners</h3>
+                            <p class="card-text">Master Java programming from scratch, covering core concepts, OOP, and
+                                real-world applications.</p>
                             <a href="#" class="btn btn-sm btn-primary">View Course</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="card online-course-card">
-                        <img src="https://source.unsplash.com/random/600x314" alt="Random Image" class="img-fluid">
+                        <img src="./assets/images/cybersec.png" alt="Cybersecurity Course" class="img-fluid">
                         <div class="card-body">
-                            <h3 class="card-title">Course Title</h3>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error beatae,
-                                repellat, labore, velit earum itaque excepturi amet nesciunt ex voluptate laboriosam nam
-                                officiis corporis iste ipsa maxime magnam cumque sint.</p>
+                            <h3 class="card-title">Google Cybersecurity Course</h3>
+                            <p class="card-text">Gain insights into cybersecurity threats, risk management, and security
+                                fundamentals.</p>
                             <a href="#" class="btn btn-sm btn-primary">View Course</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="card online-course-card">
-                        <img src="https://source.unsplash.com/random/600x314" alt="Random Image" class="img-fluid">
+                        <img src="./assets/images/data-analytics.webp" alt="Data Analytics Course" class="img-fluid">
                         <div class="card-body">
-                            <h3 class="card-title">Course Title</h3>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error beatae,
-                                repellat, labore, velit earum itaque excepturi amet nesciunt ex voluptate laboriosam nam
-                                officiis corporis iste ipsa maxime magnam cumque sint.</p>
-                            <a href="#" class="btn btn-sm btn-primary">View Course</a>
+                            <h3 class="card-title">Google Data Analytics</h3>
+                            <p class="card-text">Learn data analysis, visualization, and SQL skills to make data-driven
+                                decisions.</p>
+                            <a href="" class="btn btn-sm btn-primary">View Course</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="card online-course-card">
-                        <img src="https://source.unsplash.com/random/600x314" alt="Random Image" class="img-fluid">
+                        <img src="./assets/images/RPA.jpg" alt="RPA Course" class="img-fluid">
                         <div class="card-body">
-                            <h3 class="card-title">Course Title</h3>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error beatae,
-                                repellat, labore, velit earum itaque excepturi amet nesciunt ex voluptate laboriosam nam
-                                officiis corporis iste ipsa maxime magnam cumque sint.</p>
-                            <a href="#" class="btn btn-sm btn-primary">View Course</a>
+                            <h3 class="card-title">Robotic Process Automation (UiPath)</h3>
+                            <p class="card-text">Automate repetitive tasks using UiPath, enhancing efficiency in
+                                business processes.</p>
+                            <a href="" class="btn btn-sm btn-primary">View Course</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="card online-course-card">
-                        <img src="https://source.unsplash.com/random/600x314" alt="Random Image" class="img-fluid">
+                        <img src="./assets/images/C-sharp.webp" alt="C# Course" class="img-fluid">
                         <div class="card-body">
-                            <h3 class="card-title">Course Title</h3>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error beatae,
-                                repellat, labore, velit earum itaque excepturi amet nesciunt ex voluptate laboriosam nam
-                                officiis corporis iste ipsa maxime magnam cumque sint.</p>
-                            <a href="#" class="btn btn-sm btn-primary">View Course</a>
+                            <h3 class="card-title">Mastering C# 10 with Modern Features</h3>
+                            <p class="card-text">Explore advanced C# programming techniques, including LINQ,
+                                async/await, and design patterns.</p>
+                            <a href="" class="btn btn-sm btn-primary">View Course</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Classroom Training -->
     <section class="classroom-training" id="classroom-training">
@@ -458,7 +440,7 @@
 
 
     <!-- Reviews Slider -->
-    <section class="reviews-slider" id="reviews">
+    <section class="reviews-slider" id="about-us">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-6">
@@ -679,7 +661,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light pt-4 position-relative" id="about-us">
+    <footer class="bg-dark text-light pt-4 position-relative" id="contact-us">
         <div class="container">
             <div class="row">
                 <!-- Social Media Links -->
@@ -709,8 +691,8 @@
                         </li>
                         <li><a href="#classroom-training" class="text-light"><i class="bi bi-mortarboard"></i> Classroom
                                 Training Courses</a></li>
-                        <li><a href="#reviews" class="text-light"><i class="bi bi-chat-dots"></i> Reviews</a></li>
-                        <li><a href="#about-us" class="text-light"><i class="bi bi-people"></i> About Us</a></li>
+                        <li><a href="#about-us" class="text-light"><i class="bi bi-chat-dots"></i> Reviews</a></li>
+                        <li><a href="contact-us" class="text-light"><i class="bi bi-people"></i> About Us</a></li>
                     </ul>
                 </div>
 
