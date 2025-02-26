@@ -14,6 +14,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- Include Bootstrap Icons (Required for Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
     <!-- LightSlider CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
         integrity="sha512-yJHCxhu8pTR7P2UgXFrHvLMniOAL5ET1f5Cj+/dzl+JIlGTh5Cz+IeklcXzMavKvXP8vXqKMQyZjscjf3ZDfGA=="
@@ -32,30 +35,17 @@
         integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
         </script>
 
-    <script>
-        $(document).ready(function () {
-            $('#review-slider-content').lightSlider({
-                auto: true,
-                loop: true,
-                responsive: [{
-                    breakpoint: 800,
-                    settings: {
-                        item: 3,
-                        slideMove: 1,
-                        slideMargin: 6,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        item: 1,
-                        slideMove: 1
-                    }
-                }
-                ]
-            });
-        });
-    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -77,10 +67,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Courses</a>
+                        <a class="nav-link active" aria-current="page" href="#courses">Courses</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">About</a>
@@ -107,7 +97,8 @@
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#registerOnline">SIGN-IN
+                    <a href="#registerOnline" class="btn btn-success btn-sm" data-toggle="modal"
+                        data-target="#registerOnline">SIGN-IN
                         / REGISTER</a>
                 </div>
             </div>
@@ -115,7 +106,7 @@
     </nav>
 
     <!-- Home Banner -->
-    <header class="main-banner">
+    <header class="main-banner" id="home">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -185,89 +176,62 @@
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="feature-holder">
                         <h2>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-history"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
-                                <path fill-rule="evenodd"
-                                    d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
-                                <path fill-rule="evenodd"
-                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-book" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 2.5v11a1.5 1.5 0 0 0 3 0v-11a1.5 1.5 0 0 0-3 0zM5 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2H5z" />
                             </svg>
                         </h2>
-                        <h3>Feature Title</h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam soluta eligendi atque
-                            tempore
+                        <h3>Interactive Learning</h3>
+                        <p>Engage with interactive video lessons, quizzes, and live sessions to enhance learning.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="feature-holder">
+                        <h2>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 8a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" />
+                            </svg>
+                        </h2>
+                        <h3>Personalized Dashboard</h3>
+                        <p>Track your learning progress, manage courses, and set goals with a user-friendly dashboard.
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="feature-holder">
                         <h2>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-history"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
-                                <path fill-rule="evenodd"
-                                    d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
-                                <path fill-rule="evenodd"
-                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 8a.5.5 0 0 1-.5.5H8V4.5a.5.5 0 0 1 1 0V8h2.5a.5.5 0 0 1 .5.5z" />
                             </svg>
                         </h2>
-                        <h3>Feature Title</h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam soluta eligendi atque
-                            tempore
-                        </p>
+                        <h3>24/7 Course Access</h3>
+                        <p>Learn at your own pace with unlimited access to courses, anytime and anywhere.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="feature-holder">
                         <h2>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-history"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
-                                <path fill-rule="evenodd"
-                                    d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
-                                <path fill-rule="evenodd"
-                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-award" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.669.864 8 0 6.331.864a1.5 1.5 0 0 0-.595 1.812l.518 1.566-1.23 1.23a1.5 1.5 0 0 0 0 2.121l1.23 1.23-.518 1.566a1.5 1.5 0 0 0 .595 1.812L8 16l1.669-.864a1.5 1.5 0 0 0 .595-1.812l-.518-1.566 1.23-1.23a1.5 1.5 0 0 0 0-2.121l-1.23-1.23.518-1.566a1.5 1.5 0 0 0-.595-1.812z" />
                             </svg>
                         </h2>
-                        <h3>Feature Title</h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam soluta eligendi atque
-                            tempore
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="feature-holder">
-                        <h2>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-history"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
-                                <path fill-rule="evenodd"
-                                    d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
-                                <path fill-rule="evenodd"
-                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
-                            </svg>
-                        </h2>
-                        <h3>Feature Title</h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam soluta eligendi atque
-                            tempore
-                        </p>
+                        <h3>Certifications & Rewards</h3>
+                        <p>Complete courses and earn certificates to showcase your skills and achievements.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Online Courses -->
-    <section class="online-courses">
+    <section class="online-courses" id="courses">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-6">
@@ -357,8 +321,144 @@
         </div>
     </section>
 
+    <!-- Classroom Training -->
+    <section class="classroom-training" id="classroom-training">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="classroom-courses-text-widget">
+                        <h2>Classroom Training Courses</h2>
+                        <p>
+                            Our expertly designed classroom training programs provide hands-on learning with
+                            industry-relevant skills. Learn from experienced instructors and gain practical experience
+                            in various domains.
+                        </p>
+                        <a href="#view-courses" class="btn btn-warning btn-sm">View all Courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5" id="view-courses">
+                <!-- Signup Form -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="card text-white bg-primary sign-up-form-sidebar">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Sign up to get more details.
+                            </h4>
+                            <p>Fill in your details and get access to course materials and updates.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Your Name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control form-control-sm" placeholder="Your Email ID"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Course Name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="submit" class="btn btn-warning btn-block btn-sm"
+                                        value="Register Online Now">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course List -->
+                <div class="col-lg-8 col-md-8">
+                    <div class="list-group">
+                        <div class="list-group-item active">
+                            Classroom Training Courses | Career-Based | Short-Term
+                        </div>
+
+                        <!-- Course 1 -->
+                        <a href="" class="list-group-item course-list-item">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <img src="assets/images/java.jpeg" alt="Java Programming" class="img-fluid">
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <h5>Java Programming (Beginner to Advanced)</h5>
+                                    <p>Master Java with hands-on projects and real-world applications. Covers OOP,
+                                        JavaFX, and Spring Boot.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 2 -->
+                        <a href="#" class="list-group-item course-list-item">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <img src="./assets/images/python.jpeg" alt="Python Programming" class="img-fluid">
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <h5>Python for Data Science</h5>
+                                    <p>Learn Python from scratch with a focus on Data Science, Machine Learning, and AI
+                                        applications.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 3 -->
+                        <a href="#" class="list-group-item course-list-item">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <img src="./assets/images/full-stack.png" alt="Web Development" class="img-fluid">
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <h5>Full Stack Web Development</h5>
+                                    <p>Master front-end and back-end development with HTML, CSS, JavaScript, React, and
+                                        Node.js.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 4 -->
+                        <a href="#" class="list-group-item course-list-item">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <img src="./assets/images/cloud.webp" alt="Cloud Computing" class="img-fluid">
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <h5>Cloud Computing with AWS & Azure</h5>
+                                    <p>Gain expertise in cloud platforms like AWS, Microsoft Azure, and Google Cloud.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 5 -->
+                        <a href="#" class="list-group-item course-list-item">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <img src="./assets/images/hacking.jpg" alt="Cyber Security" class="img-fluid">
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <h5>Cyber Security & Ethical Hacking</h5>
+                                    <p>Learn cybersecurity techniques, penetration testing, and ethical hacking tools.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Reviews Slider -->
-    <section class="reviews-slider">
+    <section class="reviews-slider" id="reviews">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-6">
@@ -379,8 +479,8 @@
                             <li>
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="./assets/images/user.jpg" alt="user">
-                                        <h6 class="card-title">User Name</h6>
+                                        <img src="./assets/images/user1.jpg" alt="user">
+                                        <h6 class="card-title">Nihal Ahmed</h6>
                                         <h5 class="star">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -419,7 +519,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <img src="./assets/images/user.jpg" alt="user">
-                                        <h6 class="card-title">User Name</h6>
+                                        <h6 class="card-title">Mohammed Aasim</h6>
                                         <h5 class="star">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +558,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <img src="./assets/images/user.jpg" alt="user">
-                                        <h6 class="card-title">User Name</h6>
+                                        <h6 class="card-title">Minhaj ul Hassan</h6>
                                         <h5 class="star">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -497,7 +597,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <img src="./assets/images/user.jpg" alt="user">
-                                        <h6 class="card-title">User Name</h6>
+                                        <h6 class="card-title">Mohamed Shahith</h6>
                                         <h5 class="star">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -536,7 +636,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <img src="./assets/images/user.jpg" alt="user">
-                                        <h6 class="card-title">User Name</h6>
+                                        <h6 class="card-title">Hannan</h6>
                                         <h5 class="star">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -572,181 +672,6 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Classroom Training -->
-    <section class="classroom-training">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-6">
-                    <div class="classroom-courses-text-widget">
-                        <h2>Classroom Training Courses</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam alias dolores officia
-                            repellendus labore. Deserunt molestiae corporis incidunt nulla, reiciendis adipisci
-                            harum est dolor non quaerat nihil dignissimos quae molestias!
-                        </p>
-                        <a href="#" class="btn btn-warning btn-sm">View all Courses</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-4 col-md-4">
-                    <div class="card text-white bg-primary sign-up-form-sidebar">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Sign-up to get more details.
-                            </h4>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis
-                                repellendus assumenda consequatur aliquid harum nulla mollitia fugit rem aperiam.
-                            </p>
-                            <form>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Your Name"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control form-control-sm" placeholder="Your Email ID"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Course Name"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="submit" class="btn btn-warning btn-block btn-sm"
-                                        value="Register Online Now" required>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <div class="list-group">
-                        <div class="list-group-item active">
-                            Classroom Training Courses | Career Based | Short Term
-                        </div>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item course-list-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <img src="https://source.unsplash.com/random/600x314" alt="Random Image"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatibus ut
-                                        eius unde commodi laboriosam iure beatae repellendus? Placeat error a rerum
-                                        dolores dolor tempora minus et quaerat reprehenderit temporibus!</p>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -754,123 +679,128 @@
     </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="bg-dark text-light pt-4 position-relative" id="about-us">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <aside class="footer-widget">
-                        <h5>Follow Us</h5>
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Youtube</a></li>
-                            <li><a href="#">Github</a></li>
-                        </ul>
-                    </aside>
+                <!-- Social Media Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/nnihalahmed07" class="text-light" target="_blank">
+                                <i class="bi bi-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/in/nihalahmed07/" class="text-light" target="_blank">
+                                <i class="bi bi-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://x.com/nnihalahmed07" class="text-light" target="_blank">
+                                <i class="bi bi-twitter-x"></i> X (Twitter)</a></li>
+                        <li><a href="https://www.youtube.com/@_.nihalahmed._" class="text-light" target="_blank">
+                                <i class="bi bi-youtube"></i> YouTube</a></li>
+                        <li><a href="https://github.com/nihalahmed07" class="text-light" target="_blank">
+                                <i class="bi bi-github"></i> GitHub</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <aside class="footer-widget">
-                        <h5>Site Map</h5>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Courses</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Support</a></li>
-                        </ul>
-                    </aside>
+
+                <!-- Site Map -->
+                <div class="col-lg-3 col-md-6">
+                    <h5>Site Map</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-light"><i class="bi bi-house-door"></i> Home</a></li>
+                        <li><a href="#features" class="text-light"><i class="bi bi-stars"></i> Features</a></li>
+                        <li><a href="#online-courses" class="text-light"><i class="bi bi-laptop"></i> Online Courses</a>
+                        </li>
+                        <li><a href="#classroom-training" class="text-light"><i class="bi bi-mortarboard"></i> Classroom
+                                Training Courses</a></li>
+                        <li><a href="#reviews" class="text-light"><i class="bi bi-chat-dots"></i> Reviews</a></li>
+                        <li><a href="#about-us" class="text-light"><i class="bi bi-people"></i> About Us</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <aside class="footer-widget">
-                        <h5>Recent Updates</h5>
-                        <ul>
-                            <li><a href="#">Update One</a></li>
-                            <li><a href="#">Update Two</a></li>
-                            <li><a href="#">Update Three</a></li>
-                            <li><a href="#">Update Four</a></li>
-                            <li><a href="#">Update Five</a></li>
-                        </ul>
-                    </aside>
+
+                <!-- Recent Updates -->
+                <div class="col-lg-3 col-md-6">
+                    <h5>Recent Updates</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="" class="text-light"><i class="bi bi-megaphone"></i> New Course Launched</a></li>
+                        <li><a href="" class="text-light"><i class="bi bi-award"></i> Scholarship Opportunities</a>
+                        </li>
+                        <li><a href="" class="text-light"><i class="bi bi-calendar-event"></i> Live Webinars</a></li>
+                        <li><a href="" class="text-light"><i class="bi bi-briefcase"></i> Internship Openings</a></li>
+                        <li><a href="" class="text-light"><i class="bi bi-chat"></i> Community Forum</a></li>
+                    </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <aside class="footer-widget">
                         <address>
-                            <h2>COMPANY</h2>
+                            <h2>Neo Academy</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus adipisci tenetur?
+                                Chennai, TamilNadu, India
                             </p>
                             <p>
                                 <strong>Email: </strong> <a
-                                    href="mailto:someone@something.com">someone@something.com</a>
+                                    href="mailto:n.nihalahmed1@gmail.com">n.nihalahmed1@gmail.com</a>
                             </p>
                             <p>
-                                <strong>Phone: </strong> <a href="tel:+95123456789">+95123456789</a>
+                                <strong>Phone: </strong> <a href="tel:+95123456789">+91 123 456 789</a>
                             </p>
                         </address>
                     </aside>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
+            <div class="row mt-3 copy">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2025 NeoAcademy. All Rights Reserved.</p>
+                </div>
+            </div>
         </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="btn btn-primary rounded-circle position-fixed"
+            style="bottom: 20px; right: 20px; display: none;">
+            <i class="bi bi-arrow-up"></i>
+        </button>
     </footer>
 
-    <!-- Copy -->
-    <section class="copy">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; 2020. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Register Online Modal -->
-    <div class="modal fade" id="registerOnline" tabindex="-1" aria-labelledby="registerOnlineLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerOnlineLabel">Register Online</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="custom-divider">
+    <!-- Review slider js  -->
+    <script>
+        $(document).ready(function () {
+            $('#review-slider-content').lightSlider({
+                auto: true,
+                loop: true,
+                responsive: [{
+                    breakpoint: 800,
+                    settings: {
+                        item: 3,
+                        slideMove: 1,
+                        slideMargin: 6,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        item: 1,
+                        slideMove: 1
+                    }
+                }
+                ]
+            });
+        });
+    </script>
 
-                </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quos commodi?</p>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control form-control-sm" placeholder="Your Email ID"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control form-control-sm" placeholder="Phone No" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Course Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="submit" class="btn btn-success btn-block btn-sm" value="Register Online Now"
-                                required>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Back to Top Script -->
+    <script>
+        // Show/hide "Back to Top" button
+        window.onscroll = function () {
+            document.getElementById("backToTop").style.display =
+                (document.documentElement.scrollTop > 100) ? "block" : "none";
+        };
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+        // Scroll to top on button click
+        document.getElementById("backToTop").onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+
 </body>
 
 </html>
