@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 .container-fluid {
     padding: 10px 60px;
 }
@@ -135,28 +139,19 @@ section.online-courses,
     font-size: 14px;
 }
 
-footer.main-footer {
-    background-color: #292929;
-    color: white;
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-
-aside.footer-widget {
-    margin-bottom: 25px;
-}
+/* footer  */
 
 aside.footer-widget h5 {
     font-size: 16px;
 }
 
-aside.footer-widget ul {
+aside.footer-widget p {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
 }
 
-aside.footer-widget ul li a {
+aside.footer-widget p a {
     text-decoration: none;
     font-size: 14px;
     color: #adadad;
@@ -164,27 +159,25 @@ aside.footer-widget ul li a {
     margin-bottom: 5px;
 }
 
-address h2 {
+.address h2 {
     font-size: 20px;
 }
 
-address p {
+.address p {
     font-size: 14px;
 }
 
-section.copy {
-    padding-top: 15px;
+
+footer a {
+    text-decoration: none;
+}
+
+.copy {
     padding-bottom: 15px;
-    background-color: black;
-    color: white;
-    font-size: 14px;
-    text-align: center;
 }
 
-section.copy p {
-    margin: 0px;
-}
-
-.google-map {
-    padding-top: 60px;
+.img-fluid {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
 }
