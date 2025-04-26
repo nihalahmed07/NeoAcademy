@@ -1,23 +1,10 @@
 * {
     scroll-behavior: smooth;
-}
-
-.container-fluid {
-    padding: 10px 60px;
-}
-
-.custom-nav {
-    /* font-size: small; */
-    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
-}
-
-.custom-nav ul.dropdown-menu {
-    font-size: small;
+    text-decoration: none;
 }
 
 .btn-sm {
     font-family: "poppins";
-    /* font-weight: bold; */
     font-size: 11px;
 }
 
@@ -33,10 +20,6 @@
     width: 3%;
 }
 
-.feature-holder {
-    text-align: center;
-    margin-bottom: 25px;
-}
 
 .feature-holder h3 {
     font-size: 1.2em;
@@ -141,43 +124,13 @@ section.online-courses,
 
 /* footer  */
 
-aside.footer-widget h5 {
-    font-size: 16px;
-}
-
 aside.footer-widget p {
     list-style-type: none;
-    padding: 0px;
-    margin: 0px;
 }
 
 aside.footer-widget p a {
-    text-decoration: none;
     font-size: 14px;
     color: #adadad;
     display: inline-block;
     margin-bottom: 5px;
-}
-
-.address h2 {
-    font-size: 20px;
-}
-
-.address p {
-    font-size: 14px;
-}
-
-
-footer a {
-    text-decoration: none;
-}
-
-.copy {
-    padding-bottom: 15px;
-}
-
-.img-fluid {
-    /* height: 140px; */
-    /* width: 100%; */
-    /* object-fit: cover; */
 }
